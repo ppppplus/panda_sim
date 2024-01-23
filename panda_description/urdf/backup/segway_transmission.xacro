@@ -28,18 +28,18 @@
         </actuator>
     </transmission>
     </xacro:macro>
-    <!-- <xacro:macro name="steering_transmission" params="LR">
-    <transmission name="${LR}_steering_trans">
+    <xacro:macro name="steering_transmission">
+    <transmission name="steering_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${LR}_steering_joint">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <joint name="Chassis_front_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
-      <actuator name="${LR}_steering_act">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <actuator name="Chassis_front_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
-    </xacro:macro> -->
+    </xacro:macro>
 <!-- Defining the control plugin used in this robot -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">

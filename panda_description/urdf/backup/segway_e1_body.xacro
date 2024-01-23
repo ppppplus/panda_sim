@@ -34,7 +34,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis body.STL" />
+          filename="package://panda_description/meshes/Chassis body.STL" />
       </geometry>
       <material
         name="">
@@ -48,7 +48,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis body.STL" />
+          filename="package://panda_description/meshes/Chassis body.STL" />
       </geometry>
     </collision>
   </link>
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -94,7 +94,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
@@ -133,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -147,7 +147,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
@@ -186,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis front beam.STL" />
+          filename="package://panda_description/meshes/Chassis front beam.STL" />
       </geometry>
       <material
         name="">
@@ -200,7 +200,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis front beam.STL" />
+          filename="package://panda_description/meshes/Chassis front beam.STL" />
       </geometry>
     </collision>
   </link>
@@ -244,7 +244,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -258,7 +258,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
@@ -297,7 +297,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -311,7 +311,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>

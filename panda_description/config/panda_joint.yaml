@@ -1,0 +1,33 @@
+# PID gains for the panda_hardware_gazebo plugin.
+gains:
+    right_rear_wheel_joint:
+        p: 100000.0
+        d: 10.0
+        i: 0.50
+        i_clamp: 3.0 
+    left_rear_wheel_joint:
+        p: 100000.0
+        d: 10.0
+        i: 0.50
+        i_clamp: 3.0
+
+# Configuration for the ros_controllers joint_state_controller.
+joint_state_publisher:
+    type: "joint_state_controller/JointStateController"
+    publish_rate: 100 
+
+# Configuration for the steer_bot_hardware_gazebo plugin.
+panda_hardware_gazebo:
+  rear_wheel  : 'rear_wheel_joint'       #    The name of the rear wheel joint, used to receive the linear drive command from the steer_drive_controller.
+  front_steer : 'front_steer_joint'         #   The name of the front steering joint, which is used to receive angle drive commands from the steer_drive_controller.
+
+  virtual_rear_wheels: ['right_rear_wheel_joint','left_rear_wheel_joint']                #   The name of the virtual rear wheel joint, used to send speed commands to the corresponding wheel joint of Gazebo.
+  virtual_front_wheels: ['right_front_wheel_joint','left_front_wheel_joint']  # The name of the virtual front wheel joint is used to grasp the current angle of the corresponding Gazebo wheel joint.
+  virtual_front_steers: ['chassis_front_steer_joint'] #  The name of the virtual front steering joint, used to send position commands to the corresponding steering joint in Gazebo.
+
+  enable_ackermann_link : true           #  If true, the virtual ackerman link mechanism is enabled. Otherwise, the paralell link mechanism will be enabled.
+  wheel_separation_h : 0.4035             #  The length of the wheel spacing on the left and right sides is used to calculate the steering angle of the Ackerman linkage
+  wheel_separation_w : 0.3492            # The front and rear track is used to calculate the steering angle of the Ackerman linkage.
+
+
+

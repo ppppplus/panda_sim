@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
-     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
-     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
-  name="segway_e1_description">
+<?xml version="1.0"?>
+<robot name="segway" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="Box_inertial_matrix" params="m l w h">
+       <inertial>
+               <mass value="${m}" />
+               <inertia ixx="${m*(h*h + l*l)/12}" ixy = "0" ixz = "0"
+                   iyy="${m*(w*w + l*l)/12}" iyz= "0"
+                   izz="${m*(w*w + h*h)/12}" />
+       </inertial>
+   </xacro:macro>
+
   <link name="base_link"/>
   <link
     name="Chassis body">
@@ -13,6 +18,7 @@
         rpy="0 0 0" />
       <mass
         value="1.5192" />
+      <!-- <xacro:Box_inertial_matrix m="1.5192" l="0.6" w="0.1" h="0.1" /> -->
       <inertia
         ixx="0.048829"
         ixy="1.5025E-05"
@@ -20,14 +26,15 @@
         iyy="0.0069994"
         iyz="-0.002399"
         izz="0.052057" />
-    </inertial>
+      </inertial>
+      
     <visual>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis body.STL" />
+          filename="package://panda_description/meshes/Chassis body.STL" />
       </geometry>
       <material
         name="">
@@ -41,7 +48,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis body.STL" />
+          filename="package://panda_description/meshes/Chassis body.STL" />
       </geometry>
     </collision>
   </link>
@@ -73,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -87,12 +94,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Left_rear"
+    name="left_rear_wheel_joint"
     type="continuous">
     <origin
       xyz="-0.30884 0.04815 -0.080406"
@@ -126,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -140,12 +147,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Right_rear"
+    name="right_rear_wheel_joint"
     type="continuous">
     <origin
       xyz="0.24188 0.04815 -0.080406"
@@ -179,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis front beam.STL" />
+          filename="package://panda_description/meshes/Chassis front beam.STL" />
       </geometry>
       <material
         name="">
@@ -193,12 +200,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Chassis front beam.STL" />
+          filename="package://panda_description/meshes/Chassis front beam.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Chassis_front_joint"
+    name="chassis_front_steer_joint"
     type="revolute">
     <origin
       xyz="-0.0335 0.504 -0.0515"
@@ -237,7 +244,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -251,12 +258,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Left_front"
+    name="left_front_wheel_joint"
     type="continuous">
     <origin
       xyz="0.27184 0.0001 -0.028906"
@@ -290,7 +297,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
       <material
         name="">
@@ -304,12 +311,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://segway_e1_description/meshes/Wheel.STL" />
+          filename="package://panda_description/meshes/Wheel.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="Right_front"
+    name="right_front_wheel_joint"
     type="continuous">
     <origin
       xyz="-0.27184 0.0001 -0.028906"

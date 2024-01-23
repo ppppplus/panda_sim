@@ -1,0 +1,11 @@
+<library path="lib/libpanda_hardware_gazebo">
+
+  <class
+    name="panda_hardware_gazebo/PandaHardwareGazebo"
+    type="panda_hardware_gazebo::PandaHardwareGazebo"
+    base_class_type="gazebo_ros_control::RobotHWSim">
+    <description>
+      Steer Book arm simulation interface.
+    </description>
+  </class>
+</library>

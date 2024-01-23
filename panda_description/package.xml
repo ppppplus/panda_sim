@@ -1,10 +1,10 @@
 <package format="2">
-  <name>segway_e1_description</name>
+  <name>panda_description</name>
   <version>1.0.0</version>
   <description>
-    <p>URDF Description package for segway_e1_description</p>
+    <p>URDF Description package for panda_description</p>
     <p>This package contains configuration data, 3D models and launch files
-for segway_e1_description robot</p>
+for panda_description robot</p>
   </description>
   <author>jixiaonan</author>
   <maintainer email="xiaonan.ji@ninebot.com" />

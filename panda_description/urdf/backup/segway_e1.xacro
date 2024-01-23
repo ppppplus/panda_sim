@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <robot name="segway" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:include filename="/home/plus/Work/segway_ws/src/segway_e1_description/urdf/segway_e1_body.xacro" />
-    <xacro:include filename="/home/plus/Work/segway_ws/src/segway_e1_description/urdf/segway_transmission.xacro" />
+    <xacro:include filename="$(find panda_description)/urdf/segway_e1_body.xacro" />
+    <xacro:include filename="$(find panda_description)/urdf/segway_transmission.xacro" />
 
     <xacro:wheel_transmission LR="right" FR="rear"/>
     <xacro:wheel_transmission LR="left" FR="rear"/>
+    <xacro:steering_transmission />
+
     <!-- <wheel_transmission LR="right" FR="front"/>
     <wheel_transmission LR="left" FR="front"/> -->
 </robot>
